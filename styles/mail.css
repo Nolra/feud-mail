@@ -1,0 +1,189 @@
+/*css reset*/
+* {margin: 0;padding: 0; box-sizing: border-box;}
+img {max-width: 100%;}
+/*end css reset*/
+
+/*fonts*/
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+/*end fonts*/
+
+/*common styles*/
+body {font-family: Roboto-Regular;}
+/*end common styles*/
+
+/*SECTION MAIL APP*/
+/*mail header*/
+.mail-app-header {
+  background:#ff3333;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  height: 40px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+.mail-app-header .nav {
+  float: left;
+  padding: 13px 30px 0 0;
+}
+.mail-app-header .nav span {
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 15px;
+  margin-bottom: 3px;
+}
+.mail-app-header .nav span:last-child {
+  margin-bottom: 0;
+}
+.mail-app-header h1 {
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  line-height: 40px;
+}
+.mail-app.open .mail-app-header h1,
+.mail-app.open .nav span,
+.arrow {
+  display: none;
+}
+.mail-app.open .arrow {
+  display: block;
+  background: url("../images/arrow.png") no-repeat;
+  background-size: contain;
+
+  width: 15px;
+  height: 15px;
+}
+/*end mail header*/
+/*mail-item*/
+.mail-item {
+  height: 65px;
+  overflow: hidden;
+}
+.mail-header {
+  margin: 0 15px;
+  float: left;
+  padding: 10px 0;
+}
+.mail-header .avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.mail-body {
+  border-bottom: 1px solid #aeaeae;
+  float: left;
+  width: calc(100% - 60px);
+  height: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+.mail-body .person {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1;
+  width: calc(100% - 50px);
+}
+.mail-body .mail-counter {
+  color: #aeaeae;
+  margin-left: 5px;
+  font-weight: normal;
+}
+.mail-body .title,
+.mail-body .text {
+  font-size: 11px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  margin-top: 5px;
+  width: calc(100% - 50px);
+}
+.mail-body .title {
+  margin-top: 4px;
+}
+.mail-body .text {
+  color: #aeaeae;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mail-time {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: rgb(174, 174, 174);
+  font-size: 10px;
+}
+.mail-star {
+  width: 15px;
+  height: 15px;
+  background: url("../images/star.png") no-repeat;
+  position: absolute;
+  right: 15px;
+  top: 30px;
+}
+.mail-star.star {
+  background-position: right;
+}
+.already-read .person,
+.already-read .title {
+  font-weight: normal;
+}
+/*end mail-item*/
+
+/*read mail-item*/
+.read-mail-title {
+  font-size: 11px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  margin-top: 5px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #aeaeae;
+}
+.read-mail-body {
+  padding: 10px 15px
+}
+.read-mail-body-head {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+.read-mail .read-mail-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  float: left;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.read-mail .from {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 5px;
+}
+.read-mail .to {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  margin-top: 5px;
+}
+.read-mail .date {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  position: absolute;
+  right: 15px;
+  top: 22px;
+}
+.read-mail p {
+  font-size: 12px;
+}
+/*end read mail-item*/
+/*END SECTION MAIL APP*/
