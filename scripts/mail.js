@@ -1,4 +1,15 @@
 $( document ).ready(function() {
+	// data user
+	let userData = [
+		user = {
+			login: "Vladimir Esionov",
+			email: "nolraprof@gmail.com",
+			allEmail: 4,
+			socialEmail: 2,
+			promoEmail: 1
+		}
+	]
+	// data user end
 	// data
 	let userMail = [
 		mail = { 
@@ -47,6 +58,8 @@ $( document ).ready(function() {
 		}
 	]
 	// end data
+
+	// add email
 	let mailCounter = 0;
 	userMail.map(function(){
 		let thisMail = userMail[mailCounter];
@@ -68,7 +81,9 @@ $( document ).ready(function() {
 		);
 		mailCounter++;
 	})
-	$("title").text('Входящие ' + mailCounter  + ' - mail');
+	// add email end
+
+	// email open
 	$(".mail-item").click(function(event){
 		$(this).addClass("already-read");
 		let mail = userMail[$(this).attr("data-value")];
@@ -91,9 +106,52 @@ $( document ).ready(function() {
 			'</section>'
 		);
 	})
+	// email open end
+	// close
 	$(".arrow").click(function(event){
 		$(".read-mail").remove();
 		$(".mail-app-catalog").show();
 		$(".mail-app").removeClass("open");		
 	})
+	$(window).on("navigate", function (event, data) { // back button phone
+		event.preventDefault()
+	  var direction = data.state.direction;
+	  if (direction == 'back') {
+	  	if ($(".mail-app").hasClass("open")) {
+				$(".read-mail").remove();
+				$(".mail-app-catalog").show();
+				$(".mail-app").removeClass("open");	
+	  	}
+	  	if ($(".menu").hasClass("open")) {
+	  		$(".menu").removeClass("open");	
+	  	}
+	  }
+	});
+	// close end
+	// nav
+	$(".nav").click(function(event){
+		$(".menu").addClass("open");		
+	})
+	$(".menu-item").click(function(event){
+		$(".menu").removeClass("open");
+	})
+	$(".all").click(function(event){
+		$(".nav-title").text("Несортированные");
+	})
+	$(".promo").click(function(event){
+		$(".nav-title").text("Промоакции");
+	})
+	$(".social").click(function(event){
+		$(".nav-title").text("Соцсети");
+	})
+	$(".menu-item span").off()
+	// nav end
+	// add meta info
+	$("title").text('Входящие ' + mailCounter  + ' - mail');
+	$(".user-email").text(userData[0].email);
+	$(".all-counter").text(userData[0].allEmail);
+	$(".social-counter").text(userData[0].socialEmail);
+	$(".promo-counter").text(userData[0].promoEmail);
+	// add meta info end
+
 });

@@ -25,7 +25,7 @@ body {font-family: Roboto-Regular;}
 }
 .mail-app-header .nav {
   float: left;
-  padding: 13px 30px 0 0;
+  margin: 13px 30px 0 0;
 }
 .mail-app-header .nav span {
   display: block;
@@ -44,7 +44,7 @@ body {font-family: Roboto-Regular;}
   line-height: 40px;
 }
 .mail-app.open .mail-app-header h1,
-.mail-app.open .nav span,
+.mail-app.open .nav,
 .arrow {
   display: none;
 }
@@ -52,9 +52,9 @@ body {font-family: Roboto-Regular;}
   display: block;
   background: url("../images/arrow.png") no-repeat;
   background-size: contain;
-
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
+  margin: 10px 0px;
 }
 /*end mail header*/
 /*mail-item*/
@@ -186,4 +186,95 @@ body {font-family: Roboto-Regular;}
   font-size: 12px;
 }
 /*end read mail-item*/
+
+
+
+/*mail menu*/
+.menu {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  left: -100%;top: 0;
+  z-index: 9;
+  transition: left 0.5s;
+}
+.menu.open {
+  left: 0;
+  transition: left 0.5s;
+}
+.menu-header {
+  height: 45px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #d8d8d8;
+  padding-top: 12px;
+}
+.user-email {
+  width: 50%;
+  height: 20px;
+  margin: 0 auto;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+}
+.menu-title {
+  background: #eee;
+  color: #666;
+  font-size: 13px;
+  font-weight: bold;
+  height: 24px;
+  line-height: 18px;
+  padding: 3px 0 0 27px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.menu-item {
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  height: 45px;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 12px 55px;
+  position: relative;
+}
+.menu-item.all {
+  background: url(../images/all.png) no-repeat left 20px center;
+}
+.menu-item.social {
+  background: url(../images/social.png) no-repeat left 20px center;
+}
+.menu-item.promo {
+  background: url(../images/promo.png) no-repeat left 20px center;
+}
+.menu-item.all,
+.menu-item.social,
+.menu-item.promo {
+  background-size: 23px;
+}
+.menu-item span {
+  position: absolute;
+  right: 25px;
+  border-radius: 3px;
+  color: #eee;
+  font-size: 13px;
+  line-height: 15px;
+  min-width: 27px;
+  padding: 2px 3px 4px;
+  text-align: center;
+}
+.all-counter {
+  background: #737373;
+}
+.social-counter {
+  background: #4986E7;
+}
+.promo-counter {
+  background: #16A765;
+}
+
+/*mail menu end*/
+
+
 /*END SECTION MAIL APP*/
