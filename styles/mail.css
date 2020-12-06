@@ -185,6 +185,18 @@ body {font-family: Roboto-Regular;}
 .read-mail p {
   font-size: 12px;
 }
+.read-mail p img {
+  max-width: 80%;
+  display: block;
+  margin: 20px auto;
+}
+.read-mail p iframe {
+  max-width: 80%;
+  display: block;
+  margin: 20px auto;
+}
+
+
 /*end read mail-item*/
 
 
